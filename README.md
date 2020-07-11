@@ -31,8 +31,7 @@ Por exemplo:
 ```sh
 $ md-links ./some/example.md
 ```
-
-2. Roadmap
+### 3. Rodmap
 Atualmente, essa biblioteca apenas identifica os links presentes no documento Markdown. Para versões futuras, deseja-se implementar a validação dos links.
 
 ---------------------------------------------------
