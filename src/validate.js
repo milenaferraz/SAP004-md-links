@@ -1,19 +1,14 @@
-const url = require('node-fetch');
+const feth= require('node-fetch');
 
-const validate = (path) => {
-    return new Promise((resolve, reject) => {
-        url(path).then((r) => {
-             const urls = r.url,
-             statusMsg = r.statusText,
-             status = r.status,
-             result =`${urls} -> ${statusMsg} -> ${status}`;
-            resolve(result); 
-            console.log(result);
-        })
-        .catch((err) => reject(err));
-    });    
+const validation= (path) => {
+    return feth(path.href).then((r) => {
+        const urls = r.url,
+        statusMsg = r.statusText,
+        status = r.status,
+        result =`${urls} -> ${statusMsg} -> ${status}`;
+        path.status= `${statusMsg} -> ${status}`;
+    })
+    .catch((err) => reject(err));
 };
 
-exports.module = {
-    validate
-}
+module.exports = validation;
