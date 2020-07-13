@@ -12,6 +12,6 @@ const validateArc = (option, links) => {
     return resolve(links);
   })
 }
-validateArc('--validate', [{href:'https://www.google.com',text:'google'}]);
-// validation({href:'https://www.google.com'}).then(resposta=> console.log(resposta))
+// validateArc('--validate', [{href:'https://www.google.com',text:'google'}]);
+// // validation({href:'https://www.google.com'}).then(resposta=> console.log(resposta))
 module.exports = validateArc

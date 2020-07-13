@@ -7,10 +7,10 @@ const readDir = (pasta) => {
       if (err) {
         reject(err.message);
       } else {
-        // const teste = path.extname();
-        // console.log(teste)
+        const teste = path.extname();
+        console.log(teste)
         resolve(dir);
-        // reject(err);
+        
       }
     });
   })
